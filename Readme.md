@@ -75,14 +75,14 @@ gradle bootRoon
 ## End-Point | LOCAL
 
 ```html
-localhost:8080/mutant
+http://localhost:8080/bartender
 ```
 
 
 ## End-Point Heroku - Bartender | POST
 
 
-[MUTANT: http://meli-env.eba-pemq3sfp.us-east-2.elasticbeanstalk.com/mutant](http://meli-env.eba-pemq3sfp.us-east-2.elasticbeanstalk.com/mutant)
+[MUTANT: http://heroku.com/bartender](http://heroku/bartender)
 
 ```javascript
 {
