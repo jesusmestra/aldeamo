@@ -79,10 +79,6 @@ http://localhost:8080/bartender
 ```
 
 
-## End-Point Heroku - Bartender | POST
-
-
-[MUTANT: http://heroku.com/bartender](http://heroku/bartender)
 
 ```javascript
 {

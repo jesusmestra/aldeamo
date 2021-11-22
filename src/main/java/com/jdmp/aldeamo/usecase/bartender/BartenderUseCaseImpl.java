@@ -35,26 +35,26 @@ public class BartenderUseCaseImpl implements BartenderUseCase {
         String result = null;
 
         Optional<ArraysData> stacks = arraysUseCase.findById(pila);
-        if(stacks.isPresent()){
+        if (stacks.isPresent()) {
 
             LinkedList<Integer> aStack = convertStringToStack(stacks.get().getInputArray());
-            List<Integer> primes = prime(iteraciones+2);
+            List<Integer> primes = prime(iteraciones + 100);
 
             ArrayList<Integer> respuesta = new ArrayList<>();
             ListIterator<Integer> listIterator;
-
             for (int i = 0; i < iteraciones; i++) {
                 listIterator = aStack.listIterator();
-                while (listIterator.hasNext()){
+                while (listIterator.hasNext()) {
                     Integer num = listIterator.next();
                     Integer mod = num % primes.get(i);
-                    if(mod == 0){
+                    if (mod == 0) {
                         listIterator.remove();
                         respuesta.add(num);
                     }
                 }
             }
             result = respuesta.stream().map(String::valueOf).collect(Collectors.joining(","));
+
         } else {
             throw new CustomExeption("No se encontro una pila con ese ID");
         }
@@ -69,14 +69,14 @@ public class BartenderUseCaseImpl implements BartenderUseCase {
      * @param stackStr
      * @return LinkedList<Integer>
      */
-    public LinkedList<Integer> convertStringToStack(String stackStr){
+    public LinkedList<Integer> convertStringToStack(String stackStr) {
         LOG.log(Level.INFO, "Iniciado convertStringToStack");
         String[] lista = stackStr.split(",");
         LinkedList<Integer> aStack = new LinkedList<>();
         for (int i = 0; i < lista.length; i++) {
             try {
                 aStack.push(Integer.valueOf(lista[i]));
-            }catch (Exception e){
+            } catch (Exception e) {
                 throw new CustomExeption("Error al convertir el numero - Formato invalido");
             }
         }
@@ -112,8 +112,8 @@ public class BartenderUseCaseImpl implements BartenderUseCase {
     private static boolean isPrime(int i) {
         LOG.log(Level.INFO, "Iniciado isPrime");
         int contador = 2;
-        boolean primo=true;
-        while ((primo) && (contador!=i)){
+        boolean primo = true;
+        while ((primo) && (contador != i)) {
             if (i % contador == 0)
                 primo = false;
             contador++;
@@ -121,7 +121,6 @@ public class BartenderUseCaseImpl implements BartenderUseCase {
         LOG.log(Level.INFO, "Iniciado isPrime");
         return primo;
     }
-
 
 
 }

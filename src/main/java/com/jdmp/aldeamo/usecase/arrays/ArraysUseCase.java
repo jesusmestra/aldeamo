@@ -2,7 +2,6 @@ package com.jdmp.aldeamo.usecase.arrays;
 
 import com.jdmp.aldeamo.domain.ArraysData;
 
-import java.util.List;
 import java.util.Optional;
 
 public interface ArraysUseCase {

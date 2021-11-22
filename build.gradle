@@ -4,13 +4,6 @@ plugins {
 	id 'java'
 }
 
-jar {
-	manifest {
-		attributes(
-				'Main-Class': 'com.jdmp.aldeamo.AldeamoApplication'
-		)
-	}
-}
 
 group = 'com.jdmp'
 version = '0.0.1-SNAPSHOT'

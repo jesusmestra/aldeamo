@@ -10,6 +10,7 @@ import javax.persistence.*;
 @Builder
 @Entity()
 @Table(name = "ARRAYS")
+@Data
 public class ArraysData {
     public ArraysData() {
     }
@@ -25,15 +26,7 @@ public class ArraysData {
         return id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
     public String getInputArray() {
         return inputArray;
-    }
-
-    public void setInputArray(String inputArray) {
-        this.inputArray = inputArray;
     }
 }
