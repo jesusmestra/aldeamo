@@ -69,10 +69,10 @@ Respuesta=6,4,2,3,5
 Ejecutar el siguiente comando:
 
 ```bash
-gradle bootRoon
+gradlew bootRoon
 ```
 
-## End-Point | LOCAL
+## End-Point | POST 
 
 ```html
 http://localhost:8080/bartender
